@@ -1,13 +1,13 @@
 /**
  * Footer.jsx
- * Site footer with attribution and the "Built for Digital Heroes" CTA.
+ * Site footer — attribution, Digital Heroes CTA, dark-mode aware.
  */
 
 import { Heart, ExternalLink } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer({ darkMode }) {
   return (
-    <footer className="mt-20 border-t border-slate-200 bg-white">
+    <footer className={`mt-20 border-t ${darkMode ? 'bg-slate-900 border-slate-700' : 'bg-white border-slate-200'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* Top row */}
@@ -15,14 +15,14 @@ export default function Footer() {
 
           {/* Attribution */}
           <div className="text-center md:text-left space-y-1">
-            <p className="text-sm font-semibold text-slate-700">
-              Full Name: <span className="text-indigo-600">Varsha</span>
+            <p className={`text-sm font-semibold ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+              Full Name: <span className="text-indigo-500 font-bold">Varsha</span>
             </p>
-            <p className="text-sm font-semibold text-slate-700">
+            <p className={`text-sm font-semibold ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               Email:{' '}
               <a
                 href="mailto:varshajnv2004@gmail.com"
-                className="text-indigo-600 hover:underline"
+                className="text-indigo-500 hover:underline font-bold"
               >
                 varshajnv2004@gmail.com
               </a>
@@ -34,7 +34,7 @@ export default function Footer() {
             href="https://digitalheroesco.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-600 text-white text-sm font-bold shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:scale-105 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-indigo-500 to-violet-600 text-white text-sm font-bold shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:scale-105 transition-all duration-200"
           >
             <span>Built for Digital Heroes</span>
             <ExternalLink className="w-4 h-4" />
@@ -42,11 +42,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-slate-400">
+        <div className={`mt-8 pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-3 ${darkMode ? 'border-slate-700' : 'border-slate-100'}`}>
+          <p className={`text-xs ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>
             © {new Date().getFullYear()} JD Match AI. All rights reserved.
           </p>
-          <p className="text-xs text-slate-400 flex items-center gap-1">
+          <p className={`text-xs flex items-center gap-1 ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>
             Made with <Heart className="w-3 h-3 text-rose-400 fill-rose-400" /> for job seekers everywhere
           </p>
         </div>

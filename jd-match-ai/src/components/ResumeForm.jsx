@@ -118,10 +118,12 @@ function UploadButton({ onText, disabled }) {
 }
 
 /* ── Main form component ─────────────────────────────────────────────────── */
-export default function ResumeForm({ onAnalyze, isLoading }) {
+export default function ResumeForm({ onAnalyze, isLoading, darkMode }) {
   const [resume, setResume] = useState('');
   const [jobDesc, setJobDesc] = useState('');
   const [error, setError] = useState('');
+
+  const ta = `w-full px-4 py-3 rounded-xl border text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all resize-y leading-relaxed disabled:opacity-60 disabled:cursor-not-allowed ${darkMode ? 'bg-slate-700 border-slate-600 text-slate-100 hover:border-slate-500' : 'bg-slate-50 border-slate-200 text-slate-800 hover:border-slate-300'}`;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -211,7 +213,7 @@ export default function ResumeForm({ onAnalyze, isLoading }) {
             placeholder="Paste your resume here...&#10;&#10;Include your skills, experience, education, and any relevant achievements."
             rows={14}
             disabled={isLoading}
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent hover:border-slate-300 transition-all resize-y leading-relaxed disabled:opacity-60 disabled:cursor-not-allowed"
+            className={ta}
           />
 
           {/* File type hint */}
@@ -258,7 +260,7 @@ export default function ResumeForm({ onAnalyze, isLoading }) {
             placeholder="Paste job description here...&#10;&#10;Include the role requirements, responsibilities, and required skills."
             rows={14}
             disabled={isLoading}
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent hover:border-slate-300 transition-all resize-y leading-relaxed disabled:opacity-60 disabled:cursor-not-allowed"
+            className={ta}
           />
 
           <p className="text-xs text-slate-400 flex items-center gap-1">
