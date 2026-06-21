@@ -4,11 +4,11 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-6366f1?style=for-the-badge)](https://jd-analyser-b9wwjsh18-varshajnv2004-9742s-projects.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-6366f1?style=for-the-badge)](https://jd-analyser-two.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Source%20Code-181717?style=for-the-badge&logo=github)](https://github.com/Varsha9833/JD-Analyser)
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel)](https://jd-analyser-b9wwjsh18-varshajnv2004-9742s-projects.vercel.app/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel)](https://jd-analyser-two.vercel.app/)
 
-**🔗 Live URL:** https://jd-analyser-b9wwjsh18-varshajnv2004-9742s-projects.vercel.app/
+**🔗 Live URL:** https://jd-analyser-two.vercel.app/
 
 **📁 GitHub:** https://github.com/Varsha9833/JD-Analyser
 
